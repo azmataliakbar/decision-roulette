@@ -289,11 +289,11 @@ option { background: #14142a; color: var(--text); }
 
 /* Narrow screens: each entry takes two lines, so the name field keeps its full width. */
 @media (max-width: 560px) {
-  /* The bottom tabs sat under the Netlify "Powered by" badge at the bottom right, which hid
-     the tab buttons. The tabs keep their height and get a blank strip below them for the badge. */
-  [data-layout="mobile"] { --tabbar-h: 92px; }
-  .tabbar { padding-bottom: 34px; }
-  .footer { justify-content: flex-start; padding-left: 16px; }
+  /* The Netlify "Powered by" badge sits over the bottom of the screen and hid the tab buttons.
+     On phones the tab bar floats 64px above the bottom edge, and the credit sits at the bottom left. */
+  [data-layout="mobile"] { --tabbar-h: 122px; }
+  [data-layout="mobile"] .tabbar { bottom: 64px; height: 58px; padding-bottom: 0; }
+  [data-layout="mobile"] .footer { bottom: 0; justify-content: flex-start; padding-left: 16px; }
   .idea-by { display: none; }
 
   .entry {

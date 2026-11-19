@@ -289,6 +289,13 @@ option { background: #14142a; color: var(--text); }
 
 /* Narrow screens: each entry takes two lines, so the name field keeps its full width. */
 @media (max-width: 560px) {
+  /* The bottom tabs sat under the Netlify "Powered by" badge at the bottom right, which hid
+     the tab buttons. The tabs keep their height and get a blank strip below them for the badge. */
+  [data-layout="mobile"] { --tabbar-h: 92px; }
+  .tabbar { padding-bottom: 34px; }
+  .footer { justify-content: flex-start; padding-left: 16px; }
+  .idea-by { display: none; }
+
   .entry {
     grid-template-columns: 34px minmax(0, 1fr) 34px;
     row-gap: 6px;

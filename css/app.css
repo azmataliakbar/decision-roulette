@@ -293,8 +293,7 @@ option { background: #14142a; color: var(--text); }
      On phones the tab bar floats 64px above the bottom edge, and the credit sits at the bottom left. */
   [data-layout="mobile"] { --tabbar-h: 154px; }
   [data-layout="mobile"] .tabbar { bottom: 96px; height: 58px; padding-bottom: 0; }
-  [data-layout="mobile"] .footer { bottom: 0; justify-content: flex-start; padding-left: 16px; }
-  .idea-by { display: none; }
+  .footer { justify-content: flex-start; padding-left: 16px; }
 
   .entry {
     grid-template-columns: 34px minmax(0, 1fr) 34px;
